@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Default Predictor</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loan Default Predictor</h1>
+      <form action="{{ url_for('predict') }}" method="post">
+        <input type="number" name="Age" placeholder="Age" required />
+        <input type="number" name="Income" placeholder="Income" required />
+        <input
+          type="number"
+          name="LoanAmount"
+          placeholder="Loan Amount"
+          required
+        />
+        <input
+          type="number"
+          name="CreditScore"
+          placeholder="Credit Score"
+          required
+        />
+        <input
+          type="number"
+          name="MonthsEmployed"
+          placeholder="Months Employed"
+          required
+        />
+        <input
+          type="number"
+          name="NumCreditLines"
+          placeholder="Number of Credit Lines"
+          required
+        />
+        <input
+          type="number"
+          step="0.01"
+          name="InterestRate"
+          placeholder="Interest Rate"
+          required
+        />
+        <input
+          type="number"
+          name="LoanTerm"
+          placeholder="Loan Term (months)"
+          required
+        />
+        <input
+          type="number"
+          step="0.01"
+          name="DTIRatio"
+          placeholder="DTI Ratio"
+          required
+        />
+        <input type="submit" value="Predict" />
+      </form>
+    </div>
+  </body>
+</html>
